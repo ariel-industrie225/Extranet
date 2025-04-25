@@ -1,7 +1,14 @@
-import { jsPDF } from 'jspdf';
+import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+
 import * as XLSX from 'xlsx';
-import { formatDate, formatMontant } from './formatters';
+import { formatDate} from './formatters';
+
+declare module 'jspdf' {
+  interface jsPDF {
+    autoTable: (options: any) => jsPDF;
+  }
+}
 
 export const exportToExcel = (data: any[], filename: string) => {
   const ws = XLSX.utils.json_to_sheet(data);
