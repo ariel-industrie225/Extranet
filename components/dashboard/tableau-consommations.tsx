@@ -65,9 +65,9 @@ export function TableauConsommations() {
       remboursé: "success",
       "en cours": "warning",
       refusé: "error"
-    }
+    }as const;
     
-    const variant = variants[statut]
+    const variant = variants[statut] || "default";
     
     return <Badge variante={variant}>{statut}</Badge>
   }

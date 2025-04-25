@@ -1,11 +1,11 @@
 import { DashboardLayout } from "@/components/layout/dashboard-layout"
 import { Carte } from "@/components/ui-custom/carte"
 import { CarteDonnees } from "@/components/dashboard/carte-donnees"
-import { TableauConsommations } from "@/components/dashboard/tableau-consommations"
 import { GraphiqueTendance } from "@/components/dashboard/graphique-tendance"
 import { GraphiqueRepartition } from "@/components/dashboard/graphique-repartition"
 import { Bouton } from "@/components/ui-custom/bouton"
-import { BarChart2, Users, FileText, BarChart } from "lucide-react"
+import {  Users, BarChart } from "lucide-react"
+import { TableauConsommations } from "@/components/dashboard/tableau-consommations"
 
 export default function Dashboard() {
   return (

@@ -5,7 +5,7 @@ import { Carte } from "@/components/ui-custom/carte"
 import { Bouton } from "@/components/ui-custom/bouton"
 import { ChampSaisie } from "@/components/ui-custom/champ-saisie"
 import { Badge } from "@/components/ui-custom/badge"
-import { Send, Paperclip, Search, MoreVertical } from "lucide-react"
+import { Send, Paperclip, Search, MoreVertical, X } from "lucide-react"
 import { useState, useRef } from "react"
 
 type Message = {
@@ -95,7 +95,7 @@ export default function Messagerie() {
                       {msg.contenu}
                     </p>
                     {!msg.lu && (
-                      <Badge variante="primaire" className="mt-2">
+                      <Badge variante="default" className="mt-2">
                         Nouveau
                       </Badge>
                     )}

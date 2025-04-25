@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { format, startOfWeek, endOfWeek, eachDayOfInterval, subDays } from "date-fns"
-import fr from "date-fns/locale/fr"
+import {fr }from "date-fns/locale/fr"
 import { AlertCircle, ArrowUpDown, CalendarIcon, Download, FileSpreadsheet, FileText } from "lucide-react"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
@@ -185,7 +185,7 @@ export default function ConsommationsPage() {
           {consommations.filter(c => c.anomalie).map((consommation) => (
             <Alert
               key={consommation.id}
-              variant={consommation.anomalie?.severite === "error" ? "destructive" : "warning"}
+              variant={consommation.anomalie?.severite === "error" ? "destructive" : "default"}
             >
               <AlertCircle className="h-4 w-4" />
               <AlertTitle>Anomalie détectée - {consommation.beneficiaire}</AlertTitle>
@@ -251,7 +251,7 @@ export default function ConsommationsPage() {
                             <td className="p-3 text-center">
                               {conso.anomalie && (
                                 <Badge
-                                  variant={conso.anomalie.severite === "error" ? "destructive" : "warning"}
+                                  variant={conso.anomalie.severite === "error" ? "destructive" : "default"}
                                 >
                                   Anomalie
                                 </Badge>

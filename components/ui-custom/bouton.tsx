@@ -5,7 +5,7 @@ type VarianteBouton = "primaire" | "secondaire" | "outline" | "texte" | "destruc
 type TailleBouton = "petit" | "moyen" | "large"
 
 type PropsBouton = ButtonHTMLAttributes<HTMLButtonElement> & {
-  children: ReactNode
+  children?: ReactNode
   variante?: VarianteBouton
   taille?: TailleBouton
   icone?: ReactNode

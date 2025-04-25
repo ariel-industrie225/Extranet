@@ -211,7 +211,7 @@ export function Header({ toggleSidebar }: { toggleSidebar: () => void }) {
                 >
                   <div className="flex items-center justify-between">
                     <span className="font-medium">{result.titre}</span>
-                    <Badge className="ml-2" variant="secondary">
+                    <Badge className="ml-2" variante="secondary">
                       {getTypeLabel(result.type)}
                     </Badge>
                   </div>
